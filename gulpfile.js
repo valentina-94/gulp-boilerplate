@@ -32,7 +32,7 @@ function scripts() {
 }
 
 function styles() {
-    return src('app/' + preprocessor + '/main.' + preprocessor + '')
+    return src('app/' + preprocessor + '/**/*')
     .pipe(eval(preprocessor)())
     .pipe(concat('app.min.css'))
     .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid:true }))
